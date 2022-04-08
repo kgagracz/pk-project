@@ -14,8 +14,3 @@ zaimplementowanych operatorów +, -, *.
 Inne:
 - Jako strukturę danych przechowujących zawartość kontenera użyć listę 1-kierunkową.
 Uwagi organizacyjne
-- Użycie jako struktury danych tablicy dynamicznej (tzn. po jej przepełnieniu przydzielamy
-dynamicznie tablicę o 2x większym rozmiarze, po czym kopiujemy do niej wszystkie elementy)
-ogranicza maksymalną możliwą ilość punktów do zdobycia do 22.
-- Użycie jako struktury danych tablicy o stałym rozmiarze ogranicza maksymalną możliwą
-ilość punktów do zdobycia do minimum zaliczenia, tj. 16.

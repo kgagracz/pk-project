@@ -61,8 +61,8 @@ build CMakeFiles/projekt.dir/Set.cpp.obj: CXX_COMPILER__projekt_Debug C$:/Users/
   OBJECT_DIR = CMakeFiles\projekt.dir
   OBJECT_FILE_DIR = CMakeFiles\projekt.dir
 
-build CMakeFiles/projekt.dir/Head.cpp.obj: CXX_COMPILER__projekt_Debug C$:/Users/x/Desktop/studia/PK/projekt/Head.cpp || cmake_object_order_depends_target_projekt
-  DEP_FILE = CMakeFiles\projekt.dir\Head.cpp.obj.d
+build CMakeFiles/projekt.dir/Node.cpp.obj: CXX_COMPILER__projekt_Debug C$:/Users/x/Desktop/studia/PK/projekt/Node.cpp || cmake_object_order_depends_target_projekt
+  DEP_FILE = CMakeFiles\projekt.dir\Node.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\projekt.dir
   OBJECT_FILE_DIR = CMakeFiles\projekt.dir
@@ -75,7 +75,7 @@ build CMakeFiles/projekt.dir/Head.cpp.obj: CXX_COMPILER__projekt_Debug C$:/Users
 #############################################
 # Link the executable projekt.exe
 
-build projekt.exe: CXX_EXECUTABLE_LINKER__projekt_Debug CMakeFiles/projekt.dir/main.cpp.obj CMakeFiles/projekt.dir/Set.cpp.obj CMakeFiles/projekt.dir/Head.cpp.obj
+build projekt.exe: CXX_EXECUTABLE_LINKER__projekt_Debug CMakeFiles/projekt.dir/main.cpp.obj CMakeFiles/projekt.dir/Set.cpp.obj CMakeFiles/projekt.dir/Node.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\projekt.dir

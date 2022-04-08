@@ -13,8 +13,17 @@ private:
 public:
     Node* head;
 
+    //getters
     int getCurrentSize();
 
+    //setters
+    bool isUnique(int value);
+    void increment() {
+        this->currentSize++;
+    }
+
+    //list methods
+    void addToSet(Node *head, int value);
 };
 
 
