@@ -1,0 +1,21 @@
+TEMAT PROJEKTU 5 A
+Klasa implementująca zbiór (zbiór jest kontenerem, w którym elementy nie mogą się powtarzać)
+z następującymi metodami:
+- Dodaj/usuń element do/ze zbioru
+- Funkcję opróżniającą zbiór
+- Funkcję o wartościach logicznych informującą, czy dany element należy do zbioru
+- Wypisz zawartość zbioru (odpowiedni operator biblioteki iostream)
+- Informacja, ile elementów zbiór zawiera.
+- Przeciążone operatory +, -, * implementujące odpowiednio operacje sumy, różnicy oraz
+iloczynu (części wspólnej) mnogościowych. Fakultatywnie można przewidzieć także alternatywę
+wykluczającą.
+- Przeciążone operatory +=, -=, *=, zakodowane w postaci inline za pomocą wcześniej
+zaimplementowanych operatorów +, -, *.
+Inne:
+- Jako strukturę danych przechowujących zawartość kontenera użyć listę 1-kierunkową.
+Uwagi organizacyjne
+- Użycie jako struktury danych tablicy dynamicznej (tzn. po jej przepełnieniu przydzielamy
+dynamicznie tablicę o 2x większym rozmiarze, po czym kopiujemy do niej wszystkie elementy)
+ogranicza maksymalną możliwą ilość punktów do zdobycia do 22.
+- Użycie jako struktury danych tablicy o stałym rozmiarze ogranicza maksymalną możliwą
+ilość punktów do zdobycia do minimum zaliczenia, tj. 16.
