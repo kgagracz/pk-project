@@ -4,8 +4,14 @@
 
 int main() {
     Set* set = new Set();
-    Node* head = new Node(0);
-    set->addToSet(head, 20);
+
+//    for (int i = 0; i < 300; ++i) {
+//        set->addToSet(i);
+//    }
+
+    std::cout << "Curent set size: " << set->getCurrentSize() << std::endl;
+
+    set->print();
 
     return 0;
 }
