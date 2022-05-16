@@ -3,15 +3,16 @@
 #include "Node.h"
 
 int main() {
-    Set* set = new Set();
+    Set *set = new Set();
 
-//    for (int i = 0; i < 300; ++i) {
-//        set->addToSet(i);
-//    }
+    for (int i = 0; i < 30; ++i) {
+        set->addToSet(i);
+    }
 
     std::cout << "Curent set size: " << set->getCurrentSize() << std::endl;
+    set->addToSet(2);
+    set->print(set->head);
 
-    set->print();
-
+    std::cout << *(set->head) + *(set->head) << std::endl;
     return 0;
 }

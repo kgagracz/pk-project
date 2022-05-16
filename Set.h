@@ -11,20 +11,30 @@ class Set {
 private:
     int currentSize;
 public:
-    Node* head;
+    Node *head;
 
-    Set(): head(nullptr), currentSize(0) {};
+    Set() : head(nullptr), currentSize(0) {};
+
+    ~Set() {};
 
     //getters
     int getCurrentSize();
 
     //setters
     bool isUnique(int value);
+
     void increment();
 
     //list methods
     void addToSet(int value);
-    void print();
+
+    Node *findByValue(int value);
+
+    void removeFromSet(int value);
+
+    void print(Node *node);
+
+
 };
 
 

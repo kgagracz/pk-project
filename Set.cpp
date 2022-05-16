@@ -9,8 +9,8 @@ int Set::getCurrentSize() {
 }
 
 bool Set::isUnique(int value) {
-    if(head == nullptr) return true;
-    while(head != nullptr) {
+    if (head == nullptr) return true;
+    while (head != nullptr) {
         return !(head->value == value);
     }
 }
@@ -30,23 +30,43 @@ void Set::addToSet(int value) {
     if (this->getCurrentSize() == 0) {
         head = newNode;
     } else {
-        while(head->next != nullptr) {
-            head = head->next;
-        }
-        head->next = newNode;
+        newNode->next = head;
+        head = newNode;
     }
     std::cout << "Element: " << value << " has been added to set\n";
     this->increment();
 };
 
-void Set::print() {
+Node *Set::findByValue(int value) {
+    while (head != nullptr) {
+        if (head->value == value) return head;
+        head = head->next;
+    }
+}
+
+void Set::removeFromSet(int value) {
+    Node *temp = head;
+    Node *nodeToRemove = findByValue(value);
+
+    //dokonczyc, warunek jesli pusty, jesli jeden element
+
+    while (temp->next->value != nodeToRemove->value) {
+        temp = head->next;
+    }
+
+    temp->next = nodeToRemove->next;
+    delete nodeToRemove;
+}
+
+void Set::print(Node *node) {
     if (getCurrentSize() == 0) {
         std::cout << "Set is empty\n";
         return;
     }
 
-    while (head->next != nullptr) {
-        std::cout << head->value << std::endl;
+    while (head != nullptr) {
+        std::cout << head << std::endl;
+        head = head->next;
     }
 
 }

@@ -1,16 +1,15 @@
 TEMAT PROJEKTU 5 A
-Klasa implementująca zbiór (zbiór jest kontenerem, w którym elementy nie mogą się powtarzać)
+Klasa implementująca zbiór (zbiór jest konmtenerem, w którym elementy nie ogą się powtarzać)
 z następującymi metodami:
-- Dodaj/usuń element do/ze zbioru
-- Funkcję opróżniającą zbiór
-- Funkcję o wartościach logicznych informującą, czy dany element należy do zbioru
-- Wypisz zawartość zbioru (odpowiedni operator biblioteki iostream)
-- Informacja, ile elementów zbiór zawiera.
-- Przeciążone operatory +, -, * implementujące odpowiednio operacje sumy, różnicy oraz
-iloczynu (części wspólnej) mnogościowych. Fakultatywnie można przewidzieć także alternatywę
-wykluczającą.
-- Przeciążone operatory +=, -=, *=, zakodowane w postaci inline za pomocą wcześniej
-zaimplementowanych operatorów +, -, *.
+[x][ ] - Dodaj/usuń element do/ze zbioru
+[ ] - Funkcję opróżniającą zbiór
+[x] - Funkcję o wartościach logicznych informującą, czy dany element należy do zbioru
+[x] - Wypisz zawartość zbioru (odpowiedni operator biblioteki iostream)
+[x] - Informacja, ile elementów zbiór zawiera.
+[x] - Przeciążone operatory +, -, * implementujące odpowiednio operacje sumy, różnicy oraz
+      iloczynu (części wspólnej) mnogościowych. Fakultatywnie można przewidzieć także alternatywę
+      wykluczającą.
+[ ] - Przeciążone opch operatorów +, -, *.eratory +=, -=, *=, zakodowane w postaci inline za pomocą wcześniej
+      zaimplementowany
 Inne:
-- Jako strukturę danych przechowujących zawartość kontenera użyć listę 1-kierunkową.
-Uwagi organizacyjne
+[x] - Jako strukturę danych przechowujących zawartość kontenera użyć listę 1-kierunkową.
