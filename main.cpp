@@ -11,8 +11,12 @@ int main() {
 
     std::cout << "Curent set size: " << set->getCurrentSize() << std::endl;
     set->addToSet(2);
-    set->print(set->head);
-
+    set->print();
+    set->removeFromSet(2);
+    set->removeFromSet(2);
+    set->print();
+    set->addToSet(2);
+    set->print();
     std::cout << *(set->head) + *(set->head) << std::endl;
     return 0;
 }
