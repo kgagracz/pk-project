@@ -18,21 +18,21 @@ public:
     ~Set() {};
 
     //getters
-    int getCurrentSize();
+    int getCurrentSize() const;
 
     //setters
-    bool isUnique(int value);
+    bool isUnique(int value) const;
 
     void increment();
 
     //list methods
     void addToSet(int value);
 
-    Node *findByValue(int value);
+    Node *findByValue(int value) const;
 
     void removeFromSet(int value);
 
-    void print(Node *node);
+    void print() const;
 
 
 };

@@ -4,15 +4,20 @@
 #include <iostream>
 #include "Set.h"
 
-int Set::getCurrentSize() {
+int Set::getCurrentSize() const {
     return currentSize;
 }
 
-bool Set::isUnique(int value) {
+bool Set::isUnique(int value) const {
     if (head == nullptr) return true;
-    while (head != nullptr) {
-        return !(head->value == value);
+    Node *iterator = head;
+    while (iterator != nullptr) {
+        if (iterator->value == value) return false;
+        else {
+            iterator = iterator->next;
+        }
     }
+    return true;
 }
 
 void Set::increment() {
@@ -22,8 +27,8 @@ void Set::increment() {
 void Set::addToSet(int value) {
     Node *newNode = new Node(value);
 
-    if (!this->isUnique(value)) {
-        std::cout << "Element" << value << "is already in the set\n";
+    if (!isUnique(value)) {
+        std::cout << "Element " << value << " is already in the set\n";
         return;
     }
 
@@ -37,36 +42,51 @@ void Set::addToSet(int value) {
     this->increment();
 };
 
-Node *Set::findByValue(int value) {
-    while (head != nullptr) {
-        if (head->value == value) return head;
-        head = head->next;
+Node *Set::findByValue(int value) const {
+    Node *iterator = head;
+    while (iterator != nullptr) {
+        if (iterator->value == value) return iterator;
+        iterator = iterator->next;
     }
+
+    return nullptr;
 }
 
 void Set::removeFromSet(int value) {
+
+    if (getCurrentSize() == 0) return;
+
     Node *temp = head;
     Node *nodeToRemove = findByValue(value);
-
-    //dokonczyc, warunek jesli pusty, jesli jeden element
-
-    while (temp->next->value != nodeToRemove->value) {
-        temp = head->next;
+    if (nodeToRemove == nullptr) {
+        std::cout << "Cannot found element: " << value << std::endl;
+        return;
+    }
+    while (temp != nullptr) {
+        if (temp->next->value == nodeToRemove->value) break;
+        temp = temp->next;
     }
 
-    temp->next = nodeToRemove->next;
+    if (getCurrentSize() == 1) {
+        head = nullptr;
+    } else {
+        temp->next = nodeToRemove->next;
+    }
+    std::cout << "Element: " << *(nodeToRemove) << " has been removed from set\n";
     delete nodeToRemove;
+
 }
 
-void Set::print(Node *node) {
+void Set::print() const {
     if (getCurrentSize() == 0) {
         std::cout << "Set is empty\n";
         return;
     }
-
-    while (head != nullptr) {
-        std::cout << head << std::endl;
-        head = head->next;
+    Node *iterator = head;
+    std::cout << "[ ";
+    while (iterator != nullptr) {
+        std::cout << *(iterator) << ", ";
+        iterator = iterator->next;
     }
-
+    std::cout << " ]" << std::endl;
 }
