@@ -4,6 +4,17 @@
 #include <iostream>
 #include "Set.h"
 
+Set::~Set() {
+    Node* onHand = head;
+    Node* temp = head;
+    while (onHand->next != nullptr) {
+        onHand = onHand->next;
+        delete temp;
+        temp = onHand;
+    }
+    delete onHand;
+}
+
 int Set::getCurrentSize() const {
     return currentSize;
 }
@@ -52,26 +63,29 @@ Node *Set::findByValue(int value) const {
     return nullptr;
 }
 
-void Set::removeFromSet(int value) {
+void Set::removeFromSet(int val) {
 
     if (getCurrentSize() == 0) return;
-
     Node *temp = head;
-    Node *nodeToRemove = findByValue(value);
+    Node *nodeToRemove = findByValue(val);
+    if (getCurrentSize() == 1 && head->value == val) {
+        delete head;
+        head = nullptr;
+    } else {
+        std::cout << "Cannot find element: " << val << std::endl;
+        return;
+    }
+
     if (nodeToRemove == nullptr) {
-        std::cout << "Cannot found element: " << value << std::endl;
+        std::cout << "Cannot find element: " << val << std::endl;
         return;
     }
     while (temp != nullptr) {
-        if (temp->next->value == nodeToRemove->value) break;
+        if (temp->next == nodeToRemove) break;
         temp = temp->next;
     }
 
-    if (getCurrentSize() == 1) {
-        head = nullptr;
-    } else {
-        temp->next = nodeToRemove->next;
-    }
+
     std::cout << "Element: " << *(nodeToRemove) << " has been removed from set\n";
     delete nodeToRemove;
 

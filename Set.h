@@ -15,7 +15,7 @@ public:
 
     Set() : head(nullptr), currentSize(0) {};
 
-    ~Set() {};
+    ~Set();
 
     //getters
     int getCurrentSize() const;

@@ -18,5 +18,7 @@ int main() {
     set->addToSet(2);
     set->print();
     std::cout << *(set->head) + *(set->head) << std::endl;
+    delete set;
+    
     return 0;
 }

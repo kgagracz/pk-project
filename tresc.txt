@@ -1,8 +1,8 @@
 TEMAT PROJEKTU 5 A
 Klasa implementująca zbiór (zbiór jest konmtenerem, w którym elementy nie ogą się powtarzać)
 z następującymi metodami:
-[x][ ] - Dodaj/usuń element do/ze zbioru
-[ ] - Funkcję opróżniającą zbiór
+[x][x] - Dodaj/usuń element do/ze zbioru
+[x] - Funkcję opróżniającą zbiór
 [x] - Funkcję o wartościach logicznych informującą, czy dany element należy do zbioru
 [x] - Wypisz zawartość zbioru (odpowiedni operator biblioteki iostream)
 [x] - Informacja, ile elementów zbiór zawiera.
