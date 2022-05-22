@@ -15,7 +15,6 @@ public:
 
     Node(int value) : value(value), next(nullptr) {};
 
-
     friend std::ostream &operator<<(std::ostream &out, Node &node) {
         out << node.value;
         return out;
@@ -25,21 +24,23 @@ public:
 
     Node &operator-(const Node &node);
 
-    Node &operator+=(const Node &node);
-
-    Node &operator-=(const Node &node);
-
     Node &operator*(const Node &node) noexcept;
 
-    Node &operator/(const Node &node);
+    inline Node &operator+=(const Node &node) {
+        *this = *this + node;
+        return *this;
+    };
 
-    Node &operator*=(const Node &node);
+    inline Node &operator-=(const Node &node) {
+        *this = *this - node;
+        return *this;
+    };
 
-    Node &operator/=(const Node &node);
+    Node &operator*=(const Node &node) {
+        *this = *this * node;
+        return *this;
+    };
 
-    bool operator>(const Node &second);
-
-    bool operator<(const Node &second);
 };
 
 

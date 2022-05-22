@@ -9,7 +9,7 @@ z następującymi metodami:
 [x] - Przeciążone operatory +, -, * implementujące odpowiednio operacje sumy, różnicy oraz
       iloczynu (części wspólnej) mnogościowych. Fakultatywnie można przewidzieć także alternatywę
       wykluczającą.
-[ ] - Przeciążone opch operatorów +, -, *.eratory +=, -=, *=, zakodowane w postaci inline za pomocą wcześniej
+[x] - Przeciążone opch operatorów +, -, *.eratory +=, -=, *=, zakodowane w postaci inline za pomocą wcześniej
       zaimplementowany
 Inne:
 [x] - Jako strukturę danych przechowujących zawartość kontenera użyć listę 1-kierunkową.
